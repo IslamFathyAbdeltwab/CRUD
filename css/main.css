@@ -1,0 +1,64 @@
+body {
+    background-color: #F7ECDE;
+}
+
+h1 {
+    font-family: "Pacifico", cursive;
+    font-weight: 500;
+    font-size: 50px;
+    position: relative;
+}
+
+h1::after {
+    content: "";
+    width: 260px;
+    height: 1.3rem;
+    background-color: #FEC260;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    z-index: -1;
+    transition: height .3s;
+}
+
+h1:hover::after {
+    height: 2.5rem;
+
+
+}
+
+.bor {
+    border-top-style: dotted;
+    border-bottom-style: dotted;
+}
+
+thead td {
+    font-size: 18px;
+    font-weight: 600;
+
+
+}
+
+.bg {
+    background-color: #BB4120;
+    color: white;
+    font-size: 18px;
+}
+
+h3 {
+    font-size: 30;
+    background: -webkit-linear-gradient( right,#B3AC49,#3EA55B);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.bg-g{
+    color:#3EA55B   
+}
+.bg-gold{
+    color:#B3AC49
+}
+.modal{
+    top: 167px;
+    
+}   

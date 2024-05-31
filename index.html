@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+
+    <h1 class="text-center my-5  m-auto ">Bookmarker</h1>
+
+    <div class="container bor  py-4">
+        <header class="d-flex justify-content-center  mb-4 mt-2 fs-4 align-items-center">
+            <i class="fa-solid bg-g fa-bookmark"></i>
+            <h3 class="text-center mx-2 ">Bookmark your favorite sites</h3>
+            <i class="fa-solid bg-gold fa-bookmark"></i>
+        </header>
+        <label for="name"><i class="fa-solid mx-1 my-2 fa-file-signature"></i> <span class="h6">Site Name</span></label>
+        <input type="text" placeholder="bookmark name" id="name" oninput="validateInput(this)"
+            class="form-control  mb-3">
+        <div class="alert alert-danger py-2 d-none">none valid must write word and space and word form 3 to 10 character
+        </div>
+
+
+        <div class="modal " id="model" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="closei()"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>the website url not valid or website name not valid <br> the url and name must be valid</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" onclick="closei()"
+                            data-bs-dismiss="modal">Close</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <label for="name"><i class="fa-solid fa-link-slash"></i> <span class="h6">site URL</span></label>
+        <input type="text" oninput="validateInput(this)" placeholder="website URL" id="url" class="form-control my-3">
+        <div class="alert alert-danger py-2 d-none">url must be https://namewebsite.com</div>
+
+
+        <div class="text-center"><button class="btn btn-success px-5 mt-3 " onclick="addWebsite()">submit</button></div>
+    </div>
+
+    <input type="text" placeholder="search" class="w-75 mx-auto my-3 border-0 form-control " oninput="searchT(this)"
+        id="search">
+
+
+    <table class="container text-center table my-3 ">
+        <thead class="bg-white">
+            <td>index</td>
+            <td>website Name</td>
+            <td>visit</td>
+            <td>delete</td>
+
+        </thead>
+        <tbody id="thead" class="bg-white">
+
+
+        </tbody>
+
+
+    </table>
+
+
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
